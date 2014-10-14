@@ -6,9 +6,12 @@ int main()
 {
 int i, data[MAX];
 for(i=0; i<10; i++)
-scanf("%d", &data[i]);
+  scanf("%d", &data[i]);
+  
 sort(data, data+10);
+
 for(i=0; i<10; i++)
-printf("%d ", data[i]);
+  printf("%d ", data[i]);
+
 return 0;
 }
