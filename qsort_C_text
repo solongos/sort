@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_COUNT 10
+
+int compare(const void *a , const void *b){
+        return strcmp( (char*)a , (char*)b );
+}
+
+int main(void)
+{
+        int i;
+
+        char arr[MAX_COUNT][7] = {
+                "tttt","ttt","ss","ggg","hhh",
+                "nnn","rad","dr","pp","ccc"
+        };
+
+        qsort(arr , MAX_COUNT , sizeof(arr[0]) , compare);
+        
+        for(i = 0 ; i < MAX_COUNT ; i++){
+                printf("%s\n" , arr[i]);
+        }
+        printf("\n");
+        
+        return 0;
+}
